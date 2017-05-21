@@ -1,4 +1,6 @@
-package com.kboyarshinov.advanceddagger2.basics;
+package com.kboyarshinov.advanceddagger2.payment;
+
+import com.kboyarshinov.advanceddagger2.AppScope;
 
 import javax.inject.Singleton;
 
@@ -8,7 +10,7 @@ import dagger.Provides;
 @Module
 public class PaymentsModule {
     @Provides
-    @Singleton
+    @AppScope
     PaymentProvider providePaymentProvider() {
         return new StubPaymentProvider();
     }

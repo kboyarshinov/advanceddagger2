@@ -1,14 +1,13 @@
-package com.kboyarshinov.advanceddagger2.basics;
+package com.kboyarshinov.advanceddagger2.store;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.Toast;
 
 import com.kboyarshinov.advanceddagger2.R;
+import com.kboyarshinov.advanceddagger2.StoreApp;
+import com.kboyarshinov.advanceddagger2.StoreAppComponent;
+import com.kboyarshinov.advanceddagger2.data.Product;
 
 import java.util.List;
 
@@ -26,12 +25,15 @@ public class StoreActivity extends AppCompatActivity implements StoreView {
         buildComponent().inject(this);
 
         setContentView(R.layout.activity_store);
-        storePresenter.setStoreView(this);
         storePresenter.loadProducts();
     }
 
     protected StoreComponent buildComponent() {
-        return DaggerStoreComponent.builder().build();
+        StoreAppComponent storeAppComponent = ((StoreApp) getApplicationContext()).getStoreAppComponent();
+        return DaggerStoreComponent.builder()
+                .storeModule(new StoreModule(this))
+                .storeAppComponent(storeAppComponent)
+                .build();
     }
 
     @Override
@@ -39,13 +41,4 @@ public class StoreActivity extends AppCompatActivity implements StoreView {
         // TODO
     }
 
-    @Override
-    public void showPaymentAccepted() {
-        Toast.makeText(this, "Payment accepted", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void showPaymentDeclined() {
-        Toast.makeText(this, "Payment declined", Toast.LENGTH_SHORT).show();
-    }
 }

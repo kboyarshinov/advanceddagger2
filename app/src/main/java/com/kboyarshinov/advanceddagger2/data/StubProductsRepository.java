@@ -1,4 +1,4 @@
-package com.kboyarshinov.advanceddagger2.basics;
+package com.kboyarshinov.advanceddagger2.data;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,6 @@
-package com.kboyarshinov.advanceddagger2.basics;
+package com.kboyarshinov.advanceddagger2.payment;
+
+import com.kboyarshinov.advanceddagger2.data.Product;
 
 public class StubPaymentProvider implements PaymentProvider {
     @Override

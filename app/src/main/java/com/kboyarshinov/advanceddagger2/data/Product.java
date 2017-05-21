@@ -1,4 +1,4 @@
-package com.kboyarshinov.advanceddagger2.basics;
+package com.kboyarshinov.advanceddagger2.data;
 
 public class Product {
     private final String name;
