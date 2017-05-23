@@ -30,10 +30,8 @@ public class StoreActivity extends AppCompatActivity implements StoreView {
 
     protected StoreComponent buildComponent() {
         StoreAppComponent storeAppComponent = ((StoreApp) getApplicationContext()).getStoreAppComponent();
-        return DaggerStoreComponent.builder()
-                .storeModule(new StoreModule(this))
-                .storeAppComponent(storeAppComponent)
-                .build();
+        return storeAppComponent
+                .plus(new StoreModule(this));
     }
 
     @Override

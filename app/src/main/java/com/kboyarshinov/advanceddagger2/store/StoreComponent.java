@@ -7,9 +7,10 @@ import com.kboyarshinov.advanceddagger2.data.ProductsModule;
 import javax.inject.Singleton;
 
 import dagger.Component;
+import dagger.Subcomponent;
 
 @StoreScope
-@Component(modules = StoreModule.class, dependencies = StoreAppComponent.class)
+@Subcomponent(modules = StoreModule.class)
 public interface StoreComponent {
     void inject(StoreActivity storeActivity);
 }
