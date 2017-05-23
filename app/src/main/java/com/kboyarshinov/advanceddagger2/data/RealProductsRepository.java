@@ -3,7 +3,7 @@ package com.kboyarshinov.advanceddagger2.data;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StubProductsRepository implements ProductRepository {
+public class RealProductsRepository implements ProductRepository {
     @Override
     public List<Product> products() {
         ArrayList<Product> products = new ArrayList<>(5);

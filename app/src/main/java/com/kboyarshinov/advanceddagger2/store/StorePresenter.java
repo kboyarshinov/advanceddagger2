@@ -1,6 +1,6 @@
 package com.kboyarshinov.advanceddagger2.store;
 
-import com.kboyarshinov.advanceddagger2.activity.Toaster;
+import com.kboyarshinov.advanceddagger2.ui.Toaster;
 import com.kboyarshinov.advanceddagger2.data.Product;
 import com.kboyarshinov.advanceddagger2.data.ProductRepository;
 import com.kboyarshinov.advanceddagger2.payment.PaymentProvider;

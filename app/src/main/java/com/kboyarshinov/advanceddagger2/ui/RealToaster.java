@@ -1,4 +1,4 @@
-package com.kboyarshinov.advanceddagger2.activity;
+package com.kboyarshinov.advanceddagger2.ui;
 
 import android.content.Context;
 import android.widget.Toast;
