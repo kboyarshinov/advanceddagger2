@@ -11,15 +11,9 @@ import dagger.Reusable;
 
 @Module
 public class AppModule {
-    private Application application;
-
-    public AppModule(Application application) {
-        this.application = application;
-    }
-
     @Provides
     @Reusable
-    Toaster provideToaster() {
+    Toaster provideToaster(StoreApp application) {
         return new RealToaster(application);
     }
 }

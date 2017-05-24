@@ -12,5 +12,5 @@ import dagger.android.ContributesAndroidInjector;
 public abstract class ActivityBindingModule {
     @StoreScope
     @ContributesAndroidInjector(modules = {StoreModule.class, ProductsModule.class})
-    abstract StoreActivity contributeYourActivityInjector();
+    abstract StoreActivity contributeStoreActivityInjector();
 }

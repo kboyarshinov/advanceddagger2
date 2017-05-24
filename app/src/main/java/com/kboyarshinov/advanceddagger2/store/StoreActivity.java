@@ -13,7 +13,6 @@ import javax.inject.Inject;
 import dagger.android.support.DaggerAppCompatActivity;
 
 public class StoreActivity extends DaggerAppCompatActivity implements StoreView {
-
     @Inject
     StorePresenter storePresenter;
     private TextView productsCountView;
