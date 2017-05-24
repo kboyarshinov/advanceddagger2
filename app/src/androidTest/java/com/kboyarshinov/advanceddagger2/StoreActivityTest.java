@@ -21,7 +21,7 @@ public class StoreActivityTest {
     public ActivityTestRule<StoreActivity> activityActivityTestRule = new ActivityTestRule<>(StoreActivity.class);
 
     @Test
-    public void activityDisplaysRemoteResource() throws Exception {
+    public void activityDisplays1Product() throws Exception {
         onView(withId(R.id.products_number))
                 .check(matches(withText("Products: 1")));
     }

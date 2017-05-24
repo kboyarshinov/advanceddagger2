@@ -9,7 +9,7 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.kboyarshinov.advanceddagger2.test.TestRunner"
     }
     buildTypes {
         release {
@@ -36,4 +36,7 @@ dependencies {
     compile 'com.google.dagger:dagger-android-support:2.11-rc2'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.11-rc2'
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.11-rc2'
+
+    androidTestAnnotationProcessor 'com.google.dagger:dagger-compiler:2.11-rc2'
+    androidTestAnnotationProcessor 'com.google.dagger:dagger-android-processor:2.11-rc2'
 }
