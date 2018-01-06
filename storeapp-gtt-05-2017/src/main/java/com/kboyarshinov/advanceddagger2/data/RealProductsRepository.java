@@ -1,9 +1,19 @@
 package com.kboyarshinov.advanceddagger2.data;
 
+import com.kboyarshinov.advanceddagger2.store.StoreScope;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
+@StoreScope
 public class RealProductsRepository implements ProductRepository {
+
+    @Inject
+    public RealProductsRepository() {
+    }
+
     @Override
     public List<Product> products() {
         ArrayList<Product> products = new ArrayList<>(5);

@@ -1,7 +1,5 @@
 package com.kboyarshinov.advanceddagger2;
 
-import android.app.Application;
-
 import com.kboyarshinov.advanceddagger2.ui.RealToaster;
 import com.kboyarshinov.advanceddagger2.ui.Toaster;
 
