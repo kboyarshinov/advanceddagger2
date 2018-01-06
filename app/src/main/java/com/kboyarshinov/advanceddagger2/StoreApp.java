@@ -11,3 +11,4 @@ public class StoreApp extends DaggerApplication {
             .create(this);
     }
 }
+
