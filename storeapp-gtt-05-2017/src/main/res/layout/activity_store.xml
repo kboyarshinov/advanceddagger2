@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.kboyarshinov.advanceddagger2.store.StoreActivity">
+    tools:context="com.kboyarshinov.d2.storeapp.store.StoreActivity">
 
     <TextView
         android:id="@+id/products_number"

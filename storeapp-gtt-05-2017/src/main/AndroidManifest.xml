@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".StoreApp">
+        android:name="com.kboyarshinov.d2.storeapp.StoreApp">
         <activity
-            android:name=".store.StoreActivity"
+            android:name="com.kboyarshinov.d2.storeapp.store.StoreActivity"
             android:label="@string/title_activity_store"
             android:theme="@style/AppTheme.NoActionBar">
 
