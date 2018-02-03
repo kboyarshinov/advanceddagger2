@@ -29,7 +29,8 @@ public class StoreApp extends DaggerApplication {
     @Override
     protected AndroidInjector<StoreApp> applicationInjector() {
         return DaggerStoreAppComponent.builder()
-                .networkModule(new NetworkModule("https://testurl.com/"))
+                .networkModule(new NetworkModule("http://testurl.com/"))
+                .apiKey("a6wg2udy62sd1j6aqudfu823sdaf2")
                 .create(this);
     }
 }

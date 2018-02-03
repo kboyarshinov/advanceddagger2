@@ -1,5 +1,6 @@
 package com.kboyarshinov.d2.storeapp.data;
 
+import com.kboyarshinov.d2.storeapp.network.ApiKey;
 import com.kboyarshinov.d2.storeapp.network.NetworkUrl;
 import com.kboyarshinov.d2.storeapp.store.StoreScope;
 
@@ -12,10 +13,12 @@ import javax.inject.Inject;
 public class RealProductsRepository implements ProductRepository {
 
     private final String baseUrl;
+    private final String apiKey;
 
     @Inject
-    public RealProductsRepository(@NetworkUrl String baseUrl) {
+    public RealProductsRepository(@NetworkUrl String baseUrl, @ApiKey String apiKey) {
         this.baseUrl = baseUrl;
+        this.apiKey = apiKey;
     }
 
     @Override
