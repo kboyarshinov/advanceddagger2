@@ -1,0 +1,14 @@
+// Add plugin https://plugins.gradle.org/plugin/net.ltgt.apt
+plugins {
+    id "net.ltgt.apt" version "0.10"
+}
+
+apply plugin: 'java-library'
+
+dependencies {
+    implementation 'com.google.dagger:dagger:2.14.1'
+    apt 'com.google.dagger:dagger-compiler:2.14.1'
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

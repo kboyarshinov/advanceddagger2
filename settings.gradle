@@ -1,1 +1,1 @@
-include ':storeapp-gtt-05-2017'
+include ':storeapp-gtt-05-2017', ':components'
