@@ -1,5 +1,6 @@
 package com.kboyarshinov.d2.storeapp;
 
+import com.kboyarshinov.d2.storeapp.network.NetworkModule;
 import com.kboyarshinov.d2.storeapp.thirdparty.AnalyticsLib;
 import com.kboyarshinov.d2.storeapp.thirdparty.CrashReportingLib;
 import com.kboyarshinov.d2.storeapp.thirdparty.ThirdPartyLib;
@@ -28,6 +29,7 @@ public class StoreApp extends DaggerApplication {
     @Override
     protected AndroidInjector<StoreApp> applicationInjector() {
         return DaggerStoreAppComponent.builder()
+                .networkModule(new NetworkModule("https://testurl.com/"))
                 .create(this);
     }
 }

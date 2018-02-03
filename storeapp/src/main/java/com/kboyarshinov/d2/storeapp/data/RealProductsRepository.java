@@ -1,5 +1,6 @@
 package com.kboyarshinov.d2.storeapp.data;
 
+import com.kboyarshinov.d2.storeapp.network.NetworkUrl;
 import com.kboyarshinov.d2.storeapp.store.StoreScope;
 
 import java.util.ArrayList;
@@ -10,8 +11,11 @@ import javax.inject.Inject;
 @StoreScope
 public class RealProductsRepository implements ProductRepository {
 
+    private final String baseUrl;
+
     @Inject
-    public RealProductsRepository() {
+    public RealProductsRepository(@NetworkUrl String baseUrl) {
+        this.baseUrl = baseUrl;
     }
 
     @Override
