@@ -9,4 +9,8 @@ public interface PaymentProvider {
     enum PaymentResult {
         ACCEPTED, DECLINED
     }
+
+    enum Type {
+        CREDIT_CARD, PAYPAL
+    }
 }

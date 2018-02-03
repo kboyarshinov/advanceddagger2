@@ -1,19 +1,18 @@
 package com.kboyarshinov.d2.storeapp.payment;
 
-import com.kboyarshinov.d2.storeapp.AppScope;
 import com.kboyarshinov.d2.storeapp.data.Product;
 
 import javax.inject.Inject;
 
-@AppScope
-public class RealPaymentProvider implements PaymentProvider {
+public class PayPalPaymentProvider implements PaymentProvider {
+
     @Inject
-    public RealPaymentProvider() {
+    public PayPalPaymentProvider() {
     }
 
     @Override
     public PaymentResult executePayment(Product product) {
-        if (product.getPrice() > 1000) {
+        if (product.getPrice() < 1000) {
             return PaymentResult.DECLINED;
         }
         return PaymentResult.ACCEPTED;
