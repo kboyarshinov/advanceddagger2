@@ -1,10 +1,11 @@
 package com.kboyarshinov.d2.storeapp.store;
 
-import com.kboyarshinov.d2.storeapp.payment.PaymentsProcessor;
-import com.kboyarshinov.d2.storeapp.ui.Toaster;
 import com.kboyarshinov.d2.storeapp.data.Product;
 import com.kboyarshinov.d2.storeapp.data.ProductRepository;
 import com.kboyarshinov.d2.storeapp.payment.PaymentProvider;
+import com.kboyarshinov.d2.storeapp.payment.PaymentsProcessor;
+import com.kboyarshinov.d2.storeapp.payment.SignatureUploader;
+import com.kboyarshinov.d2.storeapp.ui.Toaster;
 
 import java.util.List;
 
@@ -17,14 +18,16 @@ public class StorePresenter {
     private final PaymentsProcessor paymentsProcessor;
     private final StoreView storeView;
     private final Toaster toaster;
+    private final SignatureUploader signatureUploader;
 
     @Inject
     public StorePresenter(ProductRepository productRepository, PaymentsProcessor paymentsProcessor,
-                          StoreView storeView, Toaster toaster) {
+                          StoreView storeView, Toaster toaster, SignatureUploader signatureUploader) {
         this.productRepository = productRepository;
         this.paymentsProcessor = paymentsProcessor;
         this.storeView = storeView;
         this.toaster = toaster;
+        this.signatureUploader = signatureUploader;
     }
 
     void loadProducts() {

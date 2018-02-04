@@ -11,14 +11,15 @@ import dagger.android.AndroidInjector;
 import dagger.android.support.AndroidSupportInjectionModule;
 
 @AppScope
-@Component(modules = { AppModule.class, NetworkModule.class, ThirdPartyLibModule.class,
-        PaymentsModule.class, AndroidSupportInjectionModule.class, ActivityBindingModule.class } )
+@ReleaseWhenUiHidden
+@Component(modules = {AppModule.class, NetworkModule.class, ThirdPartyLibModule.class,
+        PaymentsModule.class, AndroidSupportInjectionModule.class, ActivityBindingModule.class})
 public interface StoreAppComponent extends AndroidInjector<StoreApp> {
     @Component.Builder
     abstract class Builder extends AndroidInjector.Builder<StoreApp> {
         @BindsInstance
         abstract Builder apiKey(@ApiKey String key);
+
         abstract Builder networkModule(NetworkModule networkModule);
-        abstract Builder appModule(AppModule appModule);
     }
 }

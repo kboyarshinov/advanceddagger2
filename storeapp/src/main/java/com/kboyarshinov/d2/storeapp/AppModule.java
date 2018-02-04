@@ -1,7 +1,5 @@
 package com.kboyarshinov.d2.storeapp;
 
-import android.content.Context;
-
 import com.kboyarshinov.d2.storeapp.ui.RealToaster;
 import com.kboyarshinov.d2.storeapp.ui.Toaster;
 
